@@ -26,6 +26,8 @@ uint32_t getnum(const char* filename){
 
     /* read file */
     if (fread(&value, 1, size, fp) != size) error("FILE READ ERROR");
+
+    fclose(fp);
     
     return ntohl(value);
 }
